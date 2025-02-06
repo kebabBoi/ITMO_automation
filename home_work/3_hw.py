@@ -10,6 +10,7 @@ def task_1(num_a, num_b):
 task_1(555.3, 555.4)
 
 
+#задание 2
 def task_2(num_c, num_d):
     if num_c - num_d == 135 or num_d - num_c == 135:
         print('yes')
@@ -19,6 +20,7 @@ def task_2(num_c, num_d):
 task_2(135, 1)
 
 
+#задание 3
 def task_3(num_month):
     # variant 1
     # if num_month == 1 or num_month == 2 or num_month == 12:
@@ -45,6 +47,7 @@ def task_3(num_month):
 task_3(5)
 
 
+#задание 4
 def task_4(num_d, num_e, num_f):
     if num_d > 10 and num_e > 10 and num_f > 10:
         print('YESSSSSSSSS')
@@ -53,6 +56,7 @@ def task_4(num_d, num_e, num_f):
 task_4(1, 12, 100)
 
 
+#задание 5
 def task_5(list_a: list):
     poz = 0
     for num in list_a:
@@ -61,6 +65,8 @@ def task_5(list_a: list):
     print(poz)
 task_5(list_a=[-1, 1, -1, 1, -1])
 
+
+#задание 6
 def task_6(year: int, month: int):
     if year == 0:
         days = month * 29
