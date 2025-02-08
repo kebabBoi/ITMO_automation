@@ -36,35 +36,41 @@
 #
 # print(home_two.click())
 
-class Input:
+from task_9_checks import Checks
+
+class Input(Checks):
     def __init__(self, loc, text):
-        self.loc = loc
+        super().__init__(loc)
         self.text = text
 
-class Button:
+class Button(Checks):
     def __init__(self, loc, text):
-        self.loc = loc
+        super().__init__(loc)
         self.text = text
 
-class Title:
+class Title(Checks):
     def __init__(self, loc, text):
-        self.loc = loc
+        super().__init__(loc)
         self.text = text
 
-class Link:
+class Link(Checks):
     def __init__(self, loc, text):
-        self.loc = loc
+        super().__init__(loc)
         self.text = text
 
 
 search = Input('input#search','Поиск')
 print(search.loc + ' ' + search.text)
+print(search.check_text(1))
 
 next = Button('button#next', 'Далее')
 print(next.loc + ' ' + next.text)
+print(next.check_text(1))
 
 logo = Title('title#logo', 'Заголовок')
 print(logo.loc + ' ' + logo.text)
+print(logo.check_text(1))
 
 hyper = Link('link#hyper', 'Ссылка')
 print(hyper.loc + ' ' + hyper.text)
+print(hyper.check_text(1))
