@@ -1,16 +1,19 @@
 #задание 1
 from selenium import webdriver
 from selenium.webdriver.common.by import  By
+from selenium.common.exceptions import NoSuchElementException
 
-driver = webdriver.Chrome()
-driver.get('https://www.saucedemo.com/')
+def search_elements():
+    driver = webdriver.Chrome()
+    try:
+        driver.get('https://www.saucedemo.com/')
 
-#поиск элемента
-uname = driver.find_element(By.CSS_SELECTOR, 'form > div > input')
-pass_w = driver.find_element(By.CSS_SELECTOR, '#password')
-button = driver.find_element(By.CSS_SELECTOR, '#login-button')
+        # поиск элемента
+        uname = driver.find_element(By.CSS_SELECTOR, 'form > div > input')
+        pass_w = driver.find_element(By.CSS_SELECTOR, '#password')
+        button = driver.find_element(By.CSS_SELECTOR, '#login-button')
+        print('Элементы найдены')
+    except NoSuchElementException:
+        print('Элементы найдены')
 
-if uname and pass_w and button is None:
-    print('Элементы не найдены')
-else:
-    print('Элементы найдены')
+search_elements()
